@@ -1,0 +1,72 @@
+<!---html>
+  <body>
+     <form method="POST" action="{{ url_for('country') }}">
+          {% for i in ab %}
+               {{i}}<input type="checkbox" value="{{i}}" name="mycheck">
+          {% endfor %}
+          <input type="submit" name="pinch" value="next">
+     </form>
+  </body>
+</html--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("C:\Users\Sanchith Abinav\Pictures\Screenshots\Screenshot 2024-02-18 181401.png"); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('country') }}">
+        {% for i in ab %}
+            <div>
+                <label>
+                    <input type="checkbox" value="{{i}}" name="mycheck"> {{i}}
+                </label>
+            </div>
+        {% endfor %}
+        <input type="submit" name="pinch" value="next">
+    </form>
+</body>
+</html>
